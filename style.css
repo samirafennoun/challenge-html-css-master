@@ -1,0 +1,228 @@
+/*
+#
+Vert: #7ed56f
+Vert medium: #55c57a
+Dark vert: #28b485
+
+*/
+    /* Copyright @rabia elgouail 
+Front web developer 
+
+*/
+    /* normaliser le css */
+    
+    * {}
+    
+    
+    body {
+        margin: 1px;
+        padding: 30px;
+    }
+    /* le corps de la page */
+    
+    .header {
+        
+
+        
+        height: 85vh;
+        background-image: linear-gradient(to right bottom, rgba(15, 230, 140, 0.8), rgba(140, 159, 160, 0.8)), url("../img/hero.jpg");
+        background-size: cover;
+        
+        background-position: top;
+        position: relative;
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        position: absolute;
+        width: 1200px;
+        top: 20px;
+        font-family: Calibri;
+    }
+    
+    .logo {}
+    
+    .logowhite {
+
+        position:relative;
+        animation-name:moveInBottom;
+        animation-duration: 3s;
+        padding: 50px;
+        height: 47px;
+        width: 95PX;
+    }
+    
+    .main {
+        display: block; 
+       
+       
+       text-align: justify;
+       animation-name: moveInRight;
+        animation-duration: 3s;
+        
+        text-align: center;
+        color: white;
+        font-size: 20px;
+    }
+    
+    #spanStyle {
+        text-transform: uppercase;
+        letter-spacing: 48px;
+        font-size: 60px;
+    }
+    
+    #spanStyle2 {
+        text-transform: uppercase;
+        letter-spacing: 18px;
+        font-size: 20px;
+    }
+    
+    .heading1 {
+        text-transform: uppercase;
+        margin-top:-4%;
+        font-weight: normal;
+        
+
+    }
+    
+    .heading11 {
+        
+        display: block;
+        animation-name: moveInLeft;
+        animation-duration: 3s;
+        animation-timing-function:easy-out;
+        text-transform: uppercase;
+        font-size :100px;
+        margin-left:25%;
+       margin-right:25%;
+       letter-spacing: 9px;
+       text-align: justify;
+        
+       
+        
+        
+
+    }
+    
+    .heading12 {
+        
+        display: block; 
+       font-size :23px;
+       margin-left:25%;
+       margin-right:23%;
+       letter-spacing:11px;
+       text-align: justify;
+       animation-name: moveInRight;
+        animation-duration: 3s;
+        
+       
+        
+    }
+    /* Animation */
+    @keyframes moveInButton{
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+    
+    @keyframes moveInLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-100px); 
+        }
+        /* 60% 
+                                    {
+transform: rotate(30deg) ;
+}*/
+
+        
+    
+    80% {
+        transform: translateX(50px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translate(-3px);
+    }
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    /* 60%
+{
+transform: rotate(-30deg) ;
+}
+*/
+    
+    80% {
+        transform: translateX(10px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+@keyframes moveInBottom {
+    0% {
+        top:-300px;
+    }
+    
+    80% {
+        top: 0px;
+    }
+    
+    100% {
+        top:0px;
+    }
+}
+/* bouton */
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .3s;
+    position: relative;
+    font-size: 15px;
+}
+.btn:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+    transform: translate(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-white {
+    background-color: white;
+    color: #777;
+}
+/* animer le boutton behind the scene  */
+.btn::after
+/* l'element fils apres le bouton */
+{}
+.btn-white::after {}
+/* l'element fils apres le bouton */
+{
+    /* 
+                            mettez l'element en rouge pour voir la difference
+
+                        */
+}
+.btn:hover::after {
+    transform: scaleX(4.2) scaleY(5.1);
+    background-color: #fff;
+    opacity: 0;
+}
+.btn-animated {
+    animation-name: moveInButton .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
